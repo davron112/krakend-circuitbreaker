@@ -6,11 +6,11 @@ import (
 	"sync/atomic"
 	"testing"
 
-	"github.com/luraproject/lura/v2/config"
-	"github.com/luraproject/lura/v2/proxy"
+	"github.com/davron112/lura/v2/config"
+	"github.com/davron112/lura/v2/proxy"
 
-	gcb "github.com/krakendio/krakend-circuitbreaker/v2/gobreaker"
-	"github.com/luraproject/lura/v2/logging"
+	gcb "github.com/davron112/krakend-circuitbreaker/v2/gobreaker"
+	"github.com/davron112/lura/v2/logging"
 )
 
 func TestNewMiddleware_multipleNext(t *testing.T) {

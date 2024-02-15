@@ -5,7 +5,7 @@ Adding the middleware to your proxy stack
 
 	import (
 		"github.com/devopsfaith/lura/v2/proxy"
-		gobreaker "github.com/krakendio/krakend-circuitbreaker/gobreaker/proxy"
+		gobreaker "github.com/davron112/krakend-circuitbreaker/gobreaker/proxy"
 	)
 
 	...
@@ -18,7 +18,6 @@ Adding the middleware to your proxy stack
 	p = gobreaker.NewMiddleware(backend)(p)
 
 	...
-
 */
 package proxy
 
@@ -26,11 +25,11 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/luraproject/lura/v2/config"
-	"github.com/luraproject/lura/v2/logging"
-	"github.com/luraproject/lura/v2/proxy"
+	"github.com/davron112/lura/v2/config"
+	"github.com/davron112/lura/v2/logging"
+	"github.com/davron112/lura/v2/proxy"
 
-	gcb "github.com/krakendio/krakend-circuitbreaker/v2/gobreaker"
+	gcb "github.com/davron112/krakend-circuitbreaker/v2/gobreaker"
 )
 
 // BackendFactory adds a cb middleware wrapping the internal factory
